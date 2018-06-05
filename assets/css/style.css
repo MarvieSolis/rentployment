@@ -69,3 +69,53 @@ button:focus {
 }
 
 
+#contactList {
+    transform: translate(6%, 0); 
+}
+
+.headshot {
+    
+    width: 100px;
+    margin: 30px;
+    opacity: 0.5;
+    transition: opacity 1s;
+    transition: width 1s;   
+    transform: translate(-50%, 0); 
+}
+
+.headshot:hover {
+    opacity: 1;
+    width: 110px;
+}
+
+#headshot1 {
+    margin-bottom: 50px;
+}
+
+#bio {
+    text-align: center;
+    transform: translate(-20%, 0);
+}
+
+#contactList {
+    margin-top: 50px;
+    margin-left: 10%;
+}
+
+
+
+
+
+#contact {
+    background-image: url("../images/contactBack.jpg");
+}
+
+#mainpage {
+    background-image: url("../images/contactBack.jpg");
+}
+
+#faq {
+    background-image: url("../images/contactBack.jpg");
+}
+
+
