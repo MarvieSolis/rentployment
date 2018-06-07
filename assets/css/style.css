@@ -67,5 +67,16 @@ button:focus {
     font-size: 12px;
 
 }
-
-
+#temporary {
+    font-family: 'Dosis', sans-serif;
+}
+.companyLogo {
+    height: 200px;
+    width: 250px;
+}
+.listing {
+    display: inline-block;
+    margin: 2px;
+    text-align: center;
+    width: 350px;
+}
