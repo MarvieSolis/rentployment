@@ -39,6 +39,7 @@ $(document).ready(function () {
         $("#devFact").text("Marvie's state ref ticket is constitutional").fadeIn(fIn);
     });
 
+
     //Mouse out
 
     $("#li").mouseout(function () {

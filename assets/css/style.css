@@ -180,6 +180,22 @@ button:focus {
     margin-top: 30px;
 }
 
+.faqA {
+    font-family: 'Dosis', sans-serif;
+    font-style: italic;
+}
+
+.faqQ {
+    font-family: 'Dosis', sans-serif;
+    color: #EF0098;
+}
+
+.faqQ:hover {
+    font-family: 'Dosis', sans-serif;
+    color: rgb(128, 4, 82); 
+
+}
+
 
 
 
