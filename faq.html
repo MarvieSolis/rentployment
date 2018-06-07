@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 </head>
 
-<body>
+<body id="faq">
 
     <header>
         <div class="row">
@@ -30,12 +30,11 @@
                     </a>
                     <span id="navbarName">Rentployment</span>
                     <ul class="navbar-nav ml-auto" style="margin-right:2%;">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="./home.html">Home
-                                <span class="sr-only">(current)</span>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="./faq.html">FAQ</a>
                         </li>
                         <li class="nav-item">
@@ -47,44 +46,7 @@
         </div>
     </header>
 
-    <div class="container" id="wrapper">
 
-        <!--LOGO with slogan-->
-
-        <div class="row justify-content-md-center" id="logoWithSlogan">
-            <div class="mx-auto">
-                <div class="row">
-                    <div class="col-md-12">
-                        <!--Logo with slogan-->
-                        <img id="sloganImage" src="./assets/images/logo2.png" alt="Rentployment Logo" />
-                        <span id="slogan">Job and housing relocation, made easy.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!--Search button, Search input, State drop down, Location-->
-
-        <div class="row justify-content-md-center" id="userInputBar">
-            <div class="col-md-4">
-                <!--Job Description-->
-                <input type="job" class="form-control" id="jobTitle" placeholder="Enter job title">
-            </div>
-            <div class="col-md-3">
-                <!--Specify location-->
-                <input type="location" class="form-control" id="location" placeholder="City, State, and/or ZIP">
-            </div>
-            <div class="col-md-1">
-                <!--Search button-->
-                <form>
-                    <button id="searchButton" type="submit" formaction="./mainpage.html">Search</button>
-                </form>
-            </div>
-        </div>
-
-
-    </div>
 
     <div id="footer" class="footer-copyright text-center py-3">© Copyright 2018
         <p>Team Something</p>
