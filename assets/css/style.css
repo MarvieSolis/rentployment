@@ -67,18 +67,20 @@ button:focus {
     font-size: 12px;
 
 }
-#temporary {
+#jobSection {
     font-family: 'Dosis', sans-serif;
 }
 .companyLogo {
-    height: 200px;
-    width: 250px;
+    height: 100px;
+    width: 110px;
 }
 .listing {
     display: inline-block;
-    margin: 2px;
+    margin: 4px;
+    margin-top: 8px;
+    margin-bottom: 8px;
     text-align: center;
-    width: 350px;
+    width: 100%;
 }
 
 
@@ -87,7 +89,6 @@ button:focus {
 }
 
 .headshot {
-    
     width: 100px;
     margin: 30px;
     opacity: 0.5;
