@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
     <!--jQuery CDN-->
-
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
     <!--Firebase CDN-->
 
     <!--Link to CSS-->
@@ -20,6 +21,9 @@
 </head>
 
 <body id="mainpage">
+
+    <!--Link to jQuery (FOR CONTACT PAGE)-->
+    <script type="text/javascript" src="./assets/script/mock.js"></script>
 
     <header>
         <div class="row">
@@ -47,22 +51,85 @@
         </div>
     </header>
 
-  <div class="container" id="wrapper">
-      <div class="row">
-          <!--Job Search Results DIV-->
-          <div class="col-md-6" id="jobSection">
+    <div class="container" id="wrapper">
+        <div class="row">
+            <!--Job Search Results DIV-->
+            <div class="col-md-6" id="jobSection">
 
-          </div>
-          <!--Housing Results DIV-->
-          <div class="col-md-6" id="housingSection">
+            </div>
+            <!--Housing Results DIV-->
+            <div class="col-md-6" id="housingSection">
 
-          </div>
-      </div>
-  </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#resultsModal">Open Modal</button>
+
+    <!-- Modal -->
+    <div id="resultsModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!--MODAL HEADER-->
+                <div class="modal-header">
+                    <h5 class="modal-title">More Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!--MODAL BODY-->
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!--HOUSE IMAGE-->
+                            <img src="./assets/images/placeholderhouse.jpeg" id="houseImage">
+                        </div>
+                        <div class="col-md-6">
+                            <!--MAP IMAGE-->
+                            <img src="" id="mapImage">
+                        </div>
+                    </div>
+                    <!--HOUSING LOCATION AND PRICE TEXT-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p id="locationName">LOCATION</p>
+                            <p id="pricingName">PRICE</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p id="locationDetails">DETAILS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="modalClose" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
 
     <div id="footer" class="footer-copyright text-center py-3">© Copyright 2018
         <p>Team Something</p>
     </div>
+
+
+    <!-- Bootstrap 4 Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
 </body>
 
