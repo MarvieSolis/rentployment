@@ -23,12 +23,15 @@ var suggestion = "";
 // On click 
 $("#submitButton").on("click", function(){
     event.preventDefault();
+
     console.log("clicked");
+
     name = $("#userName").val().trim();
     email = $("#userEmail").val().trim();
-    experience = $("input[name='userRating']:checked").val().trim();
+    experience = $("input[name='userRating']:checked").val()
     comments = $("#userComment").val().trim();
     suggestion = $("#userImprovement").val().trim();
+
     console.log({
         name: name,
         email: email,
@@ -37,6 +40,7 @@ $("#submitButton").on("click", function(){
         suggestion: suggestion,
         dataAdded: firebase.database.ServerValue.TIMESTAMP
     });
+
     database.ref().push({
         name: name,
         email: email,
@@ -46,7 +50,7 @@ $("#submitButton").on("click", function(){
         dataAdded: firebase.database.ServerValue.TIMESTAMP
     });
 
-console.log(name);
+
 
 });
 
