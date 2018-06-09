@@ -108,6 +108,24 @@ label {
     font-weight: bold;
 }
 
+#submitButton {
+    border-radius: 5px;
+    padding: 5px 8px 5px 8px;
+    background-color: #EF0098;
+    color: white;
+    font-weight: bold;
+    font-family: 'Dosis', sans-serif;
+    transition: background-color 1s;
+}
+
+#submitButton:hover {
+    border-radius: 5px;
+    padding: 5px 8px 5px 8px;
+    background-color: rgb(185, 3, 118);
+    color: white;
+    font-weight: bold;
+}
+
 button:focus {
     outline:0;
 }
