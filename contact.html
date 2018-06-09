@@ -3,29 +3,32 @@
 <html lang="en-US">
 
 <head>
-    <title>Rentployment: Search</title>
+    <title>Rentployment: Contact</title>
     <!--Favicon-->
     <link rel="icon" type="image/png" href="./assets/images/logo2.png">
     <!--Bootstrap CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
     <!--jQuery CDN-->
-
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <!--Firebase CDN-->
 
     <!--Link to CSS-->
     <link rel="stylesheet" href="./assets/css/style.css">
     <!--Link to Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+
 </head>
 
 <body id="contact">
+
 
     <header>
         <div class="row">
             <div class="col-lg-12">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand">
+                    <a class="navbar-brand" href="./home.html">
                         <img id="navbarLogo" src="./assets/images/logo2_black.png">
                     </a>
                     <span id="navbarName">Rentployment</span>
@@ -48,35 +51,56 @@
 
     <div class="container" id="contactList">
         <div class="row justify-content-md-center">
-            <div class="col-md-3">
-                <img class="headshot" id="headshot1" src="assets/images/placeholder1.png">
+            <div class="col-md-8 offset-md-2">
+                <h2>Meet the development team!</h2>
             </div>
         </div>
         <div class="row justify-content-md-center">
-            <div class="col col-lg-2">
-                <img class="headshot" src="assets/images/placeholder1.png">
-            </div>
             <div class="col-md-3">
-                <div id="bio">
-                    <p>Name: Josh Studley</p>
-                    <p>Position: Teacher </p>
-                    <p>Phone: 866-66-faster </p>
-                    <p>Fact: I like pizza</p>
+                <div id="topHeadshot">
+                    <img class="headshot" id="li" src="assets/images/li1.png">
                 </div>
             </div>
-            <div class="col col-lg-3">
-                <img class="headshot" src="assets/images/placeholder1.png">
+        </div>
+        <div id="midHeadshots">
+            <div class="row justify-content-md-center">
+                <div class="col col-lg-2">
+                    <img class="headshot" id="fletcher" src="assets/images/fletcher1.png">
+                </div>
+                <div class="col-md-3">
+                    <div id="bio">
+                        <p id="devName">Contact us</p>
+                        <p id="devPosition">if you have any</p>
+                        <p id="devEmail">suggestions or concerns!</p>
+                        <p id="devFact">You can take the survey below!</p>
+                    </div>
+                </div>
+                <div class="col col-lg-3">
+                    <img class="headshot" id="marvie" src="assets/images/marvie1.png">
+                </div>
+            </div>
+        </div>
+        <div id="bottomHeadshots">
+            <div class="row justify-content-md-center">
+                <div class="col col-lg-3">
+                    <img class="headshot" id="eddie" src="assets/images/eddie1.png">
+                </div>
+                <div class="col-md-auto">
+
+                </div>
+                <div class="col col-lg-3">
+                    <img class="headshot" id="jason" src="assets/images/jason1.png">
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-md-center" id="feedbackQuestion">
+            <div class="col-md-5">
+                <h3>Want to leave some feedback?..</h3>
             </div>
         </div>
         <div class="row justify-content-md-center">
-            <div class="col col-lg-3">
-                <img class="headshot" src="assets/images/placeholder1.png">
-            </div>
-            <div class="col-md-auto">
-
-            </div>
-            <div class="col col-lg-3">
-                <img class="headshot" src="assets/images/placeholder1.png">
+            <div class="col-md-8 offset-md-5">
+                <a href="./survey.html">Click here!</a>
             </div>
         </div>
     </div>
@@ -86,6 +110,9 @@
     <div id="footer" class="footer-copyright text-center py-3">© Copyright 2018
         <p>Team Something</p>
     </div>
+
+    <!--Link to jQuery (FOR CONTACT PAGE)-->
+    <script type="text/javascript" src="./assets/script/contact.js"></script>
 
 </body>
 

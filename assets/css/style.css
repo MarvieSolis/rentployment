@@ -1,3 +1,59 @@
+p {
+    font-family: 'Dosis', sans-serif;
+}
+
+#devPosition {
+    font-family: 'Dosis', sans-serif;
+    color: rgb(128, 4, 82); 
+    display: none;
+}
+
+#devFact {
+    font-family: 'Dosis', sans-serif;
+    color: rgb(128, 4, 82); 
+    display: none;
+}
+
+#devName {
+        font-family: 'Dosis', sans-serif;
+        font-weight: bold;
+        display: none;
+}
+
+#devEmail {
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+    display: none;
+}
+
+h2 {
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+a {
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+    color: #EF0098; 
+}
+
+a:hover {
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+    color: rgb(128, 4, 82); 
+}
+
+label {
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+}
+
 #navbarLogo {
     width: 35px;
     vertical-align: bottom;
@@ -52,12 +108,29 @@
     font-weight: bold;
 }
 
+#submitButton {
+    border-radius: 5px;
+    padding: 5px 8px 5px 8px;
+    background-color: #EF0098;
+    color: white;
+    font-weight: bold;
+    font-family: 'Dosis', sans-serif;
+    transition: background-color 1s;
+}
+
+#submitButton:hover {
+    border-radius: 5px;
+    padding: 5px 8px 5px 8px;
+    background-color: rgb(185, 3, 118);
+    color: white;
+    font-weight: bold;
+}
+
 button:focus {
     outline:0;
 }
 
 #footer {
-    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -89,21 +162,34 @@ button:focus {
 }
 
 .headshot {
-    width: 100px;
+    
+    width: 150px;
     margin: 30px;
     opacity: 0.5;
-    transition: opacity 1s;
-    transition: width 1s;   
+    transition: opacity 0.5s;
+    transition: width 0.5s;   
     transform: translate(-50%, 0); 
 }
 
 .headshot:hover {
     opacity: 1;
-    width: 110px;
+    width: 160px;
 }
 
 #headshot1 {
     margin-bottom: 50px;
+}
+
+#topHeadshot {
+    height: 200px;
+}
+
+#midHeadshots {
+    height: 200px;
+}
+
+#bottomHeadshots {
+    height: 200px;
 }
 
 #bio {
@@ -114,6 +200,33 @@ button:focus {
 #contactList {
     margin-top: 50px;
     margin-left: 10%;
+}
+
+#surveyWrapper {
+    background-color: white;
+    padding: 30px;
+    margin-top: 50px; 
+}
+
+
+#feedbackQuestion {
+    margin-top: 30px;
+}
+
+.faqA {
+    font-family: 'Dosis', sans-serif;
+    font-style: italic;
+}
+
+.faqQ {
+    font-family: 'Dosis', sans-serif;
+    color: #EF0098;
+}
+
+.faqQ:hover {
+    font-family: 'Dosis', sans-serif;
+    color: rgb(128, 4, 82); 
+
 }
 
 
@@ -130,6 +243,14 @@ button:focus {
 
 #faq {
     background-image: url("../images/contactBack.jpg");
+}
+
+#survey {
+    background-image: url("../images/contactBack.jpg");
+}
+
+#houseImage {
+    width: 300px;
 }
 
 

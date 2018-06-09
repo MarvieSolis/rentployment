@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+    <title>Rentployment: Survey</title>
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="./assets/images/logo2.png">
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <!--jQuery CDN-->
+
+    <!--Firebase CDN-->
+
+    <!--Link to CSS-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!--Link to Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+</head>
+
+<body id="survey">
+
+    <header>
+        <div class="row">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="./home.html">
+                        <img id="navbarLogo" src="./assets/images/logo2_black.png">
+                    </a>
+                    <span id="navbarName">Rentployment</span>
+                    <ul class="navbar-nav ml-auto" style="margin-right:2%;">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./home.html">Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="container"></div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="container" id="surveyWrapper">
+                    <h2>Leave some feedback!</h2>
+                    <hr>
+                    <form>
+                        <!--Name input-->
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="name" class="form-control" id="userName" placeholder="Enter name">
+                        </div>
+                        <!--Name input-->
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="userEmail" placeholder="user@email.com">
+                        </div>
+                        <!--Rating input input-->
+                        <div class="form-group">
+                            <label for="rating">How would you rate your experience using our website?</label>
+                        </div>
+                        <!--Ratings 1 through 5-->
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="userRating" id="userRating1" value="1">
+                            <label class="form-check-label" for="userRating1">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="userRating" id="userRating2" value="2">
+                            <label class="form-check-label" for="userRating1">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="userRating" id="userRating3" value="3">
+                            <label class="form-check-label" for="userRating1">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="userRating" id="userRating4" value="4">
+                            <label class="form-check-label" for="userRating1">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="userRating" id="userRating5" value="5">
+                            <label class="form-check-label" for="userRating1">5</label>
+                        </div>
+                        <div class="form-group">
+                        </div>
+                        <!--Comments input-->
+                        <div class="form-group">
+                            <label for="comment">Any comments about your experience?</label>
+                            <textarea rows="3" type="experience" class="form-control" id="userComment" placeholder="Enter comment"></textarea>
+                        </div>
+                        <!--Improvements input-->
+                        <div class="form-group">
+                            <label for="improvement">Any suggestions for our website?</label>
+                            <textarea rows="3" type="improvement" class="form-control" id="userImprovement" placeholder="Enter suggestions"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" id="submitButton">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="footer" class="footer-copyright text-center py-3">© Copyright 2018
+        <p>Team Something</p>
+    </div>
+
+</body>
+
+</html>
