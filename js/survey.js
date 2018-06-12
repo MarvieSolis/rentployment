@@ -40,7 +40,7 @@ $("#submitButton").on("click", function(){
     });
 
 
-    location.reload();
+    location.reload(true);
 
 
 console.log(name);

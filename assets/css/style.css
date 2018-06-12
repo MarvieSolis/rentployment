@@ -140,9 +140,27 @@ button:focus {
     font-size: 12px;
 
 }
+
 #jobSection {
     font-family: 'Dosis', sans-serif;
+    max-height: 55vh;
+    overflow-y: scroll;
+    background-image:url('../images/sectionBackground.jpg');
+    border: white 10px double;
+    border-radius: 10px;
+    padding-top: 20px;
 }
+
+#housingSection {
+    font-family: 'Dosis', sans-serif;
+    max-height: 55vh;
+    overflow-y: scroll;
+    background-image:url('../images/sectionBackground.jpg');
+    border: white 10px double;
+    border-radius: 10px;
+    padding-top: 20px;
+}
+
 .companyLogo {
     height: 100px;
     width: 110px;
@@ -252,7 +270,15 @@ button:focus {
     background-image: url("../images/contactBack.jpg");
 }
 
-#mapid { height: 180px; }
+#mapid { height: 200px;
+    margin-bottom: 30px;
+    border-left: double white 10px;
+    border-right: double white 10px;
+    border-bottom: double white 10px;
+    border-radius: 10px;
+}
+
+
 #houseImage {
     width: 300px;
 }
