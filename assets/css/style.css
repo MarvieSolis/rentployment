@@ -140,6 +140,21 @@ button:focus {
     font-size: 12px;
 
 }
+#jobSection {
+    font-family: 'Dosis', sans-serif;
+}
+.companyLogo {
+    height: 100px;
+    width: 110px;
+}
+.listing {
+    display: inline-block;
+    margin: 4px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+    width: 100%;
+}
 
 
 #contactList {
