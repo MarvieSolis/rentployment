@@ -12,9 +12,6 @@
         var latitude = response.results[0].geometry.location.lat;
         var longitude = response.results[0].geometry.location.lng;
 
-        console.log(latitude);
-        console.log(longitude);
-
         var mymap = L.map('mapid').setView([latitude, longitude], 10);
         var marker = L.marker([latitude, longitude]).addTo(mymap);
         
@@ -57,3 +54,69 @@
             $("#jobSection").append(newDiv);
         }
     });
+    
+        getSearch(getlocation);
+
+        function getSearch(searchText){
+            var url = 'https://www.9flats.com/api/v4/places?client_id=Ijtd9llp0reJrc9lRdIPxPLRBayPCUqilHJjBBXP&search[query]='+searchText;
+            axios.get(url, { crossdomain: true })
+             .then((response) => {
+         var total_index = response.data.places.length;
+         for(i = 0;i < total_index; i++ ){
+             var property_id = response.data.places[i].place.place_details.name;
+             var property_name = response.data.places[i].place.place_details.name;
+             var property_price = "$" + response.data.places[i].place.pricing.price;      
+             var property_description = response.data.places[i].place.place_details.description;
+             var property_number_of_bathrooms = response.data.places[i].place.place_details.number_of_bathrooms;
+             var property_number_of_bedrooms = response.data.places[i].place.place_details.number_of_bedrooms;
+             var property_photo_list = response.data.places[i].place.place_details.additional_photos;
+             var output =`
+            <div class="row">
+               <div class="col-md-12">
+                 <h2>${property_name}</h2>
+                 <ul class="list-group">
+                   <li class="list-group-item"><strong>Price:</strong> ${property_price}</li>
+                   <li class="list-group-item"><strong>Number of bathroom:</strong> ${property_number_of_bathrooms}</li>
+                   <li class="list-group-item"><strong>Number of bedroom:</strong> ${property_number_of_bedrooms}</li>
+                   <li class="list-group-item"><strong>Description:</strong> ${property_description}</li>
+                 </ul> 
+               </div>
+            </div>
+           `;
+     
+             addElement("housingSection", "p", property_id, output);
+             var img_html = getImg(property_photo_list);
+             var img_output = `
+             <div class="row">
+               ${img_html}
+             </div>
+             `;
+             addElement("housingSection", "div", property_id + "img", img_output);
+           }   
+         })
+     
+     }
+     
+     function getImg(property_photo_list){
+         var img_div = [];
+         var n =0;
+         for(n = 0; n < property_photo_list.length; n++ ){
+             var img_url = property_photo_list[n].place_photo.url;
+             var img_output = ` 
+             <div class="owl-carousel" >
+                 <img src=${img_url} alt="Tuner Image">
+             </div>   
+             `;
+             img_div.push(img_output)
+         };
+       return img_div;
+     }
+     
+     function addElement(parentId, elementTag, elementId, html) {
+         // Adds an element to the document
+         var p = document.getElementById(parentId);
+         var newElement = document.createElement(elementTag);
+         newElement.setAttribute('id', elementId);
+         newElement.innerHTML = html;
+         p.appendChild(newElement);
+     }
