@@ -9,7 +9,6 @@ var config = {
     storageBucket: "apiproject-f1054.appspot.com",
     messagingSenderId: "849810172648"
   };
-
   firebase.initializeApp(config);
 
   // Creating a variable to reference the database.
@@ -21,14 +20,26 @@ var experience = "";
 var comments = "";
 var suggestion = "";
 
+// On click 
 $("#submitButton").on("click", function(){
     event.preventDefault();
-    
+
+    console.log("clicked");
+
     name = $("#userName").val().trim();
     email = $("#userEmail").val().trim();
-    experience = $("#userName").val().trim();
+    experience = $("input[name='userRating']:checked").val()
     comments = $("#userComment").val().trim();
     suggestion = $("#userImprovement").val().trim();
+
+    console.log({
+        name: name,
+        email: email,
+        experience: experience,
+        comments: comments,
+        suggestion: suggestion,
+        dataAdded: firebase.database.ServerValue.TIMESTAMP
+    });
 
     database.ref().push({
         name: name,
@@ -40,10 +51,6 @@ $("#submitButton").on("click", function(){
     });
 
 
-    location.reload();
-
-
-console.log(name);
 
 });
 
