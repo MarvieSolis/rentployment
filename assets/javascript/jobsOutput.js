@@ -12,7 +12,7 @@
         var latitude = response.results[0].geometry.location.lat;
         var longitude = response.results[0].geometry.location.lng;
 
-        var mymap = L.map('mapid').setView([latitude, longitude], 10);
+        var mymap = L.map('mapid').setView([latitude, longitude], 12);
         var marker = L.marker([latitude, longitude]).addTo(mymap);
         
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZWRkaWVib3IiLCJhIjoiY2ppN3I2Z2NyMGVjMjN2bmJrMjZjaThzciJ9.ThOAmumSFKBt2zgAkJdWhA', {
@@ -64,6 +64,8 @@
          var total_index = response.data.places.length;
          for(i = 0;i < total_index; i++ ){
              var property_id = response.data.places[i].place.place_details.name;
+             var property_city = response.data.places[i].place.place_details.city;
+             var property_zipcode = response.data.places[i].place.place_details.zipcode;
              var property_name = response.data.places[i].place.place_details.name;
              var property_price = "$" + response.data.places[i].place.pricing.price;      
              var property_description = response.data.places[i].place.place_details.description;
@@ -71,14 +73,27 @@
              var property_number_of_bedrooms = response.data.places[i].place.place_details.number_of_bedrooms;
              var property_photo_list = response.data.places[i].place.place_details.additional_photos;
              var output =`
-            <div class="row">
+            <div class="row" id="housingOutput">
                <div class="col-md-12">
                  <h2>${property_name}</h2>
                  <ul class="list-group">
-                   <li class="list-group-item"><strong>Price:</strong> ${property_price}</li>
-                   <li class="list-group-item"><strong>Number of bathroom:</strong> ${property_number_of_bathrooms}</li>
-                   <li class="list-group-item"><strong>Number of bedroom:</strong> ${property_number_of_bedrooms}</li>
-                   <li class="list-group-item"><strong>Description:</strong> ${property_description}</li>
+                   <li class="list-group-item"><strong>Price:</strong> ${property_price} /night</li>
+                   <li class="list-group-item"><strong>Room Details:</strong> ${property_number_of_bedrooms} bedrooms, ${property_number_of_bathrooms} bathrooms</li>
+                   <li class="list-group-item"><strong>City - Zipcode:</strong> ${property_city} - ${property_zipcode}</li>
+                   <div class="card">
+                   <div class="card-header" id="houseDescription">
+                       <h5 class="mb-0">
+                           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#hello${i}" aria-expanded="false" aria-controls="collapseFive">
+                               <p class="faqQ">Click to view description.</p>
+                           </button>
+                       </h5>
+                   </div>
+                   <div id="hello${i}" class="collapse" aria-labelledby="houseDescription" data-parent="#accordion">
+                       <div class="card-body">
+                           <p class="faqA">${property_description}</p>
+                       </div>
+                   </div>
+               </div>
                  </ul> 
                </div>
             </div>
@@ -87,8 +102,10 @@
              addElement("housingSection", "p", property_id, output);
              var img_html = getImg(property_photo_list);
              var img_output = `
+             <div class="col-md-12" style="margin-bottom: 70px">
              <div class="row">
                ${img_html}
+             </div>
              </div>
              `;
              addElement("housingSection", "div", property_id + "img", img_output);
@@ -100,7 +117,7 @@
      function getImg(property_photo_list){
          var img_div = [];
          var n =0;
-         for(n = 0; n < property_photo_list.length; n++ ){
+         for(n = 0; n < 3; n++ ){
              var img_url = property_photo_list[n].place_photo.url;
              var img_output = ` 
              <div class="owl-carousel" >
