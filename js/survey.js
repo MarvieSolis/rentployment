@@ -39,6 +39,9 @@ $("#submitButton").on("click", function(){
         dataAdded: firebase.database.ServerValue.TIMESTAMP
     });
 
+
+    location.reload();
+
 console.log(name);
 
 });
