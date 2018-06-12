@@ -1,9 +1,32 @@
     // grab value from localStorage using getItem(value)
     var getJobTitle = localStorage.getItem('job-title');
     var getlocation = localStorage.getItem('location');
-    // var apikey = 'wUAz0D9kZAmshmNjeQOWo30frlqpp1vZV8cjsnN6krXxNgXocM';
+
+    var mapsURL = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + getlocation;
+    
+    $.ajax({
+        url: mapsURL,
+        method: 'GET',
+        dataType: 'json'
+    }).then(function(response) {
+        var latitude = response.results[0].geometry.location.lat;
+        var longitude = response.results[0].geometry.location.lng;
+
+        console.log(latitude);
+        console.log(longitude);
+
+        var mymap = L.map('mapid').setView([latitude, longitude], 10);
+        var marker = L.marker([latitude, longitude]).addTo(mymap);
+        
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZWRkaWVib3IiLCJhIjoiY2ppN3I2Z2NyMGVjMjN2bmJrMjZjaThzciJ9.ThOAmumSFKBt2zgAkJdWhA', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox.streets',
+            accessToken: 'pk.eyJ1IjoiZWRkaWVib3IiLCJhIjoiY2ppN3I2Z2NyMGVjMjN2bmJrMjZjaThzciJ9.ThOAmumSFKBt2zgAkJdWhA'
+        }).addTo(mymap);
+    })
+
     var buttonCount = 0;
-    // var trailURL = 'https://trailapi-trailapi.p.mashape.com/';
     var queryURL = 'https://jobs.github.com/positions.json?description=' + getJobTitle + '&location=' + getlocation;
 
     $.ajax({
