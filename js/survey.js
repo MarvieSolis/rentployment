@@ -42,6 +42,7 @@ $("#submitButton").on("click", function(){
 
     location.reload();
 
+
 console.log(name);
 
 });
