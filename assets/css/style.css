@@ -234,10 +234,7 @@ button:focus {
     background-image: url("../images/contactBack.jpg");
 }
 
-#mapid { 
-    height: 180px; 
-}
-
+#mapid { height: 180px; }
 #houseImage {
     width: 300px;
 }
